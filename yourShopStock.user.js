@@ -16,7 +16,6 @@ const nerkmidEstMinValue = 89999;
 const shopStock = document.querySelector("form[action='process_market.phtml']");
 const shopStockItems = shopStock.querySelectorAll("tr");
 const updateButton = document.querySelector("input[value='Update']");
-let updateButtonDisplayed = true;
 
 const warning = document.createElement("tr");
 warning.id = "pricewarning";
