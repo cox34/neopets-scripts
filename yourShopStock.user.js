@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Neopets - Your Shop Stock
 // @namespace   Violentmonkey Scripts
-// @match       https://www.neopets.com/market.phtml?type=your*
+// @include     https://www.neopets.com/market.phtml?*type=your*
 // @grant       none
 // @version     1.0
 // @author      -
