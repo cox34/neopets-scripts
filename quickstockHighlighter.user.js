@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Neopets - Quickstock Highlighter
 // @namespace   Violentmonkey Scripts
-// @match       https://www.neopets.com/quickstock.phtml
+// @include       https://www.neopets.com/quickstock.phtml
 // @grant       none
 // @version     1.0
 // @author      -
