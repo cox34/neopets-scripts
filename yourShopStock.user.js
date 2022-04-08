@@ -3,10 +3,11 @@
 // @namespace   Violentmonkey Scripts
 // @include     https://www.neopets.com/market.phtml?*type=your*
 // @grant       none
-// @version     1.0
+// @version     1.1
 // @author      -
 // @description Highlight new stock and warn if Nerkmid price seems low
 // ==/UserScript==
+//v1.1 fixed it so if nerk price is 0 it wont warn
 
 const highlightNewStock = true;
 const removeZeroes = false;
@@ -48,7 +49,7 @@ for(let [i, item] of shopStockItems.entries()){
       }
     });
     itemPrice.addEventListener("focusout", event => {
-      if(parseInt(itemPrice.value) < nerkmidEstMinValue){
+      if(itemPrice.value !== "0" && parseInt(itemPrice.value) < nerkmidEstMinValue){
         makeColoredChildren(item.querySelectorAll("td"), "#e1afaf");
         toggleUpdateButton(false);
         alert("That Nerkmid price seems low. Double check!");
