@@ -14,7 +14,7 @@ if(document.querySelector("#items")){
     let stockedItemsList = [];
     let stockTime = new Date();
     //unique id every 100 seconds and only when 22+ items in case 2 were bought really fast
-    //we dont want to log on every rf but we dont want to be sure we catch when it does stock
+    //we dont want to log on every rf but we want to be sure we catch when it does stock
     let stockId = stockTime.getTime().toString().substr(0,8);
     
     if(!stockHistory[stockId]){
