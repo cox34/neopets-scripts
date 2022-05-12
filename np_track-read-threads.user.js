@@ -15,6 +15,7 @@ const colorHighlightButRead = "#ffdfba"; //light orange
 const highlightTitles = [
   "bd",
   "hsd",
+  "stealthy",
 ];
 //filterMode can be "remove" (removes it from view completely) 
 //or "censor" (makes it black) if maybe you want to "spoiler" filtered threads instead
