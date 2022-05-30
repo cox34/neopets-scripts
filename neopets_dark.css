@@ -1,0 +1,503 @@
+:root
+{
+    --linkcolor: orange;
+    --linkhover: #fff;
+    --mainbg: #111;
+    --altbg: #333;
+    --altbghover: #555;
+    --maintext: #fff;
+    --lightborder: #999;
+}
+body
+{
+    padding-bottom: 50px
+}
+body,
+#neobdy,
+#header,
+#container__2020,
+#invDisplay,
+.boardPostByline,
+.nav-top-grid__2020,
+#container__2020,
+.theme-bg,
+.container,
+#boardList,
+.content,
+.sidebar,
+.inv-total-count,
+.inv-tab-label,
+.invTabs,
+.quest_speaker__2021 mark,
+.speaker mark,
+.navsub-np-meter__2020,
+.navsub-nc-meter__2020,
+.navsub-np-meter__2020 *,
+.navsub-nc-meter__2020 *,
+.inv-tabs-container,
+#navprofiledropdown__2020,
+#navprofiledropdown__2020 *,
+#invItemName,
+.popup-header__2020,
+.bank-lobby,
+.shopdropdown-tabs,
+.bdPopupGeneric.bg,
+#p1headshot,
+#navSearchH5 input,
+.foodHint td,
+.popup-header__2020 h3
+{
+    background-color: var(--mainbg) !important;
+    color: var(--maintext) !important;
+}
+/* generic content */
+a
+{
+    color: var(--linkcolor) !important;
+}
+.content > p > table,
+.content > p > table td,
+.popup-body__2020
+{
+    background-color: var(--altbg)
+}
+.contentModuleContent,
+.contentModuleTable, #esophagor-container h2
+{
+    background-color: var(--mainbg) !important;
+    color: var(--maintext) !important;
+    border: none;
+}
+.contentModule
+{
+    border: none;
+}
+#navSearchH5 input
+{
+    border-radius: 5px;
+    border: 2px solid var(--altbg);
+    padding: 5px;
+}
+/*random events*/
+.pushdown .inner_wrapper::before{
+    content: "Something has happened!";
+    font-size: 24px;
+    display: block;
+    margin:0 auto;
+    text-align:center;
+    font-weight: bold;
+}
+.pushdown .inner_wrapper{
+    background: none;
+    padding: 10px;
+}
+.pushdown{
+    border: 2px solid var(--altbghover);
+    background: var(--altbg);
+}
+
+
+/*pet quick ref*/
+div[id$='_details'].contentModule
+{
+    border: 2px solid var(--altbg) !important;
+}
+/* inventory */
+.inv-tabs-container
+{
+    border: 2px solid var(--altbg) !important;
+    border-radius: 15px !important;
+}
+.inv-tab-label,
+.invTabs
+{
+    border-radius: 0 !important;
+}
+.invTab-selected,
+.nav-dropdown__2020,
+#invDesc .popup-body__2020,
+.contentModuleHeaderAlt,
+.contentModuleHeader,
+.shopdropdown-tab-active
+{
+    background-color: var(--altbg) !important;
+}
+.nav-dropdown__2020 li:hover
+{
+    background-color: var(--altbghover) !important;
+}
+body,
+#container__2020,
+.popup-header-pattern__2020
+{
+    background-image: none;
+}
+.inv-title-container h1
+{
+    border: 2px solid var(--altbg);
+    padding-bottom: 6px;
+    border-radius: 10px;
+}
+img[name=keeperimage],
+.bank-balance-icon
+{
+    display: none
+}
+#navprofiledropdown__2020,
+#navprofiledropdown__2020 *,
+.nav-dropdown__2020,
+.nav-dropdown__2020 *
+{
+    border-color: var(--altbghover) !important;
+}
+#navProfilePetBox__2020
+{
+    box-shadow: none;
+}
+.nav-pet-menu-icon__2020
+{
+    border: 3px solid var(--altbg);
+}
+#navprofiledropdown__2020
+{
+    border-right: 4px solid var(--altbg) !important;
+}
+h2-----,
+.bank-backing-header
+{
+    background-color: #000 !important;
+    color: white !important;
+}
+.nav-top__2020
+{
+    border-bottom: 4px solid #000 !important;
+}
+.neofriendStatus,
+.nav-text__2020,
+#search_for,
+#invItemDesc,
+.shopdropdown-tabs h3
+{
+    color: #fff !important;
+}
+.nav-top-grid__2020
+{
+    background-color: #111 !important;
+}
+#boardList ul > li:nth-child(even)
+{
+    background: var(--altbg);
+    color: #fff;
+}
+.nst.nav-top-nst,
+.sidebar td,
+#boardList ul > li:nth-child(odd)
+{
+    background: #242424;
+    color: #fff;
+}
+/*old layout sidebar*/
+.sidebarModule
+{
+    border: 2px solid var(--altbghover);
+}
+.activePet img
+{
+    border: 2px solid var(--mainbg) !important;
+}
+.sidebarTable td,
+.sidebarTable
+{
+    background-color: var(--altbg) !important;
+    border: none !important;
+}
+.nst.nav-top-nst,
+td.inactive_pet,
+td.active_pet,
+.pet_notices_header,
+.pet_notices .sf
+{
+    background-color: var(--altbg) !important;
+    border: none !important;
+}
+.pet_more
+{
+    border: none !important;
+}
+.news-tab-content__2020,
+.alerts-tab-content__2020,
+.tabActive__2020,
+.news-tab-viewall__2020,
+.alerts-tab-viewall__2020
+{
+    background-color: var(--altbg);
+}
+#navnewsdropdown__2020
+{
+    border-left: 2px solid var(--mainbg) !important;
+}
+#navnewsdropdown__2020 *,
+.shopdropdown-tabs div
+{
+    color: #fff;
+    border-radius: 0 !important;
+}
+.news-tab-select__2020
+{
+    background: var(--mainbg);
+}
+#main
+{
+    border-left: 2px solid var(--altbg);
+    border-right: 2px solid var(--altbg);
+}
+.footerNifty,
+#footer,
+#footer__2020
+{
+    display: none;
+}
+#header
+{
+    background-image: none;
+    border-bottom: 2px solid var(--altbg);
+}
+.content > .medText[align="center"]
+{
+    font-size: 12px;
+}
+.user.medText,
+#nst
+{
+    font-size: 12px;
+}
+/* old layout header dropdown menus */
+.nav_image .dropdown
+{
+    background: var(--altbg);
+    border: 2px solid var(--mainbg);
+}
+.nav_image .dropdown a:hover
+{
+    color: var(--linkhover) !important;
+}
+/*i didnt want to just use form td because maybe theres a form it would mess up*/
+form[action='process_wishing.phtml'] td,
+form[action='process_wishing.phtml'] + p + p tr:nth-of-type(odd) td,
+form[name='messages'] tr:nth-of-type(odd) td,
+form[action='process_market.phtml'] table tr:nth-of-type(odd) td,
+form[name="quickstock"] tr:nth-of-type(odd)
+{
+    background: var(--altbg);
+}
+form[action='process_wishing.phtml'] + p + p tr:nth-of-type(even) td,
+form[name='messages'] tr:nth-of-type(even) td,
+form[action='process_market.phtml'] table tr:nth-of-type(even) td,
+form[name="quickstock"] tr:nth-of-type(even),
+form[name="quickstock"] tr:last-child td
+{
+    background: var(--mainbg);
+}
+/*sdb is just form*/
+form table tr:nth-of-type(even)
+{
+    background: var(--mainbg);
+}
+form table tr:nth-of-type(odd)
+{
+    background: var(--altbg);
+}
+/* old layout sidebar search */
+form[onsubmit="search_handle(this);"] input
+{
+    background-color: var(--altbg) !important;
+    border: 2px solid var(--mainbg) !important;
+    color: var(--maintext) !important;
+    font-size: 12px;
+    margin-bottom: 3px;
+    padding: 6px;
+}
+form[onsubmit="search_handle(this);"] input[type="submit"]
+{
+    background-color: var(--altbg) !important;
+    border: 2px solid var(--mainbg) !important;
+    font-size: 12px;
+    padding: 6px;
+}
+/* shop wizard */
+.sswdrop #inner-container
+{
+    border-radius: 10px;
+}
+#shopwizard,
+.wizard-filters select,
+.wizard-price input,
+#ssw__2020 #searchstr,
+#ssw__2020 .ssw-filters__2020 select,
+#ssw__2020 .ssw-price__2020 input,
+#ssw-tabs-1 #search-form input,
+#ssw-tabs-1 #search-form select
+{
+    background-color: var(--altbg);
+    border: 2px solid var(--mainbg);
+    color: var(--maintext);
+}
+#ssw__2020 .ssw-results-body ul li.ssw-results-grid-header,
+#ssw__2020 .ssw-results-header,
+#ssw__2020 .ssw-results-header p,
+.wizard__2020 .wizard-header h2,
+#ssw_tabs_pane
+{
+    background-color: var(--altbg);
+    color: var(--maintext);
+}
+.wizard-results__2020 .wizard-results-grid-header
+{
+    /*neopets css has !important*/
+    background-color: var(--altbg) !important;
+}
+.wizard__2020 .wizard-price .wizard-dash,
+#ssw__2020 .ssw-price__2020 .ssw-dash__2020,
+#results_table tr:nth-of-type(even),
+.wizard-results-grid.wizard-results-grid-shop li:nth-of-type(even),
+.wizard-results__2020 .wizard-results-grid ul li:nth-child(even),
+#ssw__2020 .ssw-results-body ul li:nth-child(even)
+{
+    background: var(--mainbg);
+}
+.wizard__2020 .wizard-body,
+.wizard__2020 .wizard-header,
+#ssw__2020 .ssw-header__2020,
+#ssw__2020 .ssw-body__2020,
+#results_table tr:nth-of-type(odd),
+.wizard-results-grid.wizard-results-grid-shop li:nth-of-type(odd),
+.wizard-results__2020 .wizard-results-grid ul li:nth-child(odd),
+#ssw__2020 .ssw-results-body ul li:nth-child(odd),
+.sswdrop #inner-container *
+{
+    background: var(--altbg);
+}
+#results_table tr td{
+    padding: 2px !important;
+}
+#ssw__2020,
+.wizard-results-grid.wizard-results-grid-shop,
+.wizard__2020 .wizard-header,
+.wizard__2020 .wizard-body
+{
+    border-color: var(--altbghover);
+}
+.wizard-char.wizard-char-old
+{
+    display: none;
+}
+.wizard-results__2020 .wizard-results-header,
+.wizard-results__2020 .wizard-results-header .wizard-results-text
+{
+    display: inline;
+}
+.wizard-results__2020 .wizard-results-header h3
+{
+    font-size: 26pt;
+}
+/* battledome */
+.npcRow:nth-child(even),
+#bdFightBorderBG,
+#bdFightBorderExpansion,
+#bdFightBorderUpper,
+#bdFightBorderBottom,
+#bdFightStep3 div.borderExpansion,
+#bdFightStep3 div.borderBottom,
+#bdFightStep3 div.borderUpper,
+#npcTable tr.headerSeparator td
+{
+    background: var(--mainbg) !important;
+}
+.npcRow:nth-child(odd),
+#npcTable tr.npcHeader
+{
+    background: var(--altbg) !important;
+}
+div.domeTitle8
+{
+    border: none;
+}
+.npcContainer
+{
+    border: 3px solid var(--altbg);
+    border-radius: 3px;
+}
+/*games*/
+#container__2020 .games-grid
+{
+    background: var(--altbg);
+    border-image-source: none;
+    border-radius: 10px;
+}
+#container__2020 .game-box,
+#container__2020 .game-box h4
+{
+    color: var(--maintext);
+    background: var(--mainbg);
+}
+/*bank*/
+#pin_field,
+.bank-upgrade select,
+.bank-upgrade input[type="text"],
+.bank-input-grid input[type="text"]
+{
+    background-color: var(--altbg);
+    border: 2px solid var(--mainbg);
+    color: var(--maintext);
+}
+.bank-lobby,
+.bank-body-container,
+.bank-section-container,
+.bank-action-container,
+.bank-backing-t4
+{
+    background-image: none;
+}
+.bank-section-container
+{
+    border-color: var(--altbg);
+}
+.bank-lobby-grid
+{
+    display: block;
+}
+.bank-lobby-grid .bank-balance,
+.bank-title
+{
+    text-align: center;
+    display: block;
+    margin: auto;
+    border-image-source: none;
+}
+.bank-balance
+{
+    font-size: 32px !important;
+}
+.bank-dialogue,
+#bankManager,
+.bank-counter,
+.bank-body-backing
+{
+    display: none;
+}
+/*neomail*/
+form[name="neomessage"] input,
+form[name="neomessage"] select,
+form[name='neomessage'] td,
+form[name='neomessage'] tr
+{
+    color: var(--maintext);
+    background-color: var(--altbg);
+}
+form[name="neomessage"] input,
+form[name="neomessage"] select,
+form[name="neomessage"] iframe#message_body
+{
+    border: 2px solid var(--mainbg);
+    border-collapse: collapse;
+}
