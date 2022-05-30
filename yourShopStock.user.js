@@ -88,7 +88,7 @@ function toggleUpdateButton(removeButton){
 function waitForResults(){
   return new Promise((resolve, reject)=>{
     const observer = new MutationObserver((mutations) => {
-      console.log(mutations);
+      //console.log(mutations);
       if(document.getElementById("results_table") !== null){
         //observer.disconnect();
         return resolve();
