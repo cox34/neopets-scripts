@@ -1,12 +1,10 @@
 // ==UserScript==
 // @name        Neopets - Your Shop Stock
-// @namespace   Violentmonkey Scripts
 // @include     http*://www.neopets.com/market.phtml?*type=your*
 // @include     http*://www.neopets.com/market_your.phtml*
 // @grant       none
 // @version     2.1
-// @author      -
-// @description Highlight new stock and warn if Nerkmid price seems low
+// @description Highlight new stock, warn if Nerkmid price seems low, auto-price after SSW
 // ==/UserScript==
 //v1.1 fixed it so if nerk price is 0 it wont warn
 //v1.2 include https://www.neopets.com/market_your.phtml* 
@@ -135,10 +133,12 @@ function updateItemPrice(itemName, itemPrice){
     const stockedItemName = item.querySelector("b");
     const stockedItemPriceInput = item.querySelector("input[name='cost_"+i+"']");
     if(stockedItemName && stockedItemName.textContent === itemName){
+      
       stockedItemPriceInput.value = itemPrice-undercutValue;
       if(itemPrice-undercutValue <= 0){
-        stockedItemPriceInput.value = itemPrice-1;
+        stockedItemPriceInput.value = 1;
       }
+      
     }
   }
 }
