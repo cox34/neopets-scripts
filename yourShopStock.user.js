@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name        Neopets - Your Shop Stock
 // @namespace   Violentmonkey Scripts
-// @include     https://www.neopets.com/market.phtml?*type=your*
-// @include     https://www.neopets.com/market_your.phtml*
+// @include     http*://www.neopets.com/market.phtml?*type=your*
+// @include     http*://www.neopets.com/market_your.phtml*
 // @grant       none
-// @version     2.0
+// @version     2.1
 // @author      -
 // @description Highlight new stock and warn if Nerkmid price seems low
 // ==/UserScript==
@@ -12,19 +12,20 @@
 //v1.2 include https://www.neopets.com/market_your.phtml* 
 //(this link seems to only appear when you click view stock after adding an item from inv)
 //v2 auto price after ssw
-
-const autoPriceAfterSSW = true;
-const randomizeUndercutValue = false;
-let undercutValue = 1;
-//enter your own value or use a random one 1-100
-const userName = document.querySelector(".user.medText").querySelector("a").textContent;
-//check username so you dont undercut your own shop
+//v2.1 fixed for 1 np items
 
 const highlightNewStock = true;
 const removeZeroes = false;
 const warnOnLowPriceNerk = true;
 const nerkmidEstMinValue = 111111;
 
+const autoPriceAfterSSW = true;
+const randomizeUndercutValue = false;
+let undercutValue = 1;
+//enter your own value or use a random one 1-100
+
+const userName = document.querySelector(".user.medText").querySelector("a").textContent;
+//check username so you dont undercut your own shop
 const shopStock = document.querySelector("form[action='process_market.phtml']");
 const shopStockItems = shopStock.querySelectorAll("tr");
 const updateButton = document.querySelector("input[value='Update']");
@@ -135,6 +136,9 @@ function updateItemPrice(itemName, itemPrice){
     const stockedItemPriceInput = item.querySelector("input[name='cost_"+i+"']");
     if(stockedItemName && stockedItemName.textContent === itemName){
       stockedItemPriceInput.value = itemPrice-undercutValue;
+      if(itemPrice-undercutValue <= 0){
+        stockedItemPriceInput.value = itemPrice-1;
+      }
     }
   }
 }
