@@ -14,9 +14,9 @@
 //v2 auto price after ssw
 
 const autoPriceAfterSSW = true;
-const randomizeUndercutValue = true;
-let undercutValue = Math.ceil(Math.random()*100); 
-//enter your own value or use the random one
+const randomizeUndercutValue = false;
+let undercutValue = 1;
+//enter your own value or use a random one 1-100
 const userName = document.querySelector(".user.medText").querySelector("a").textContent;
 //check username so you dont undercut your own shop
 
@@ -103,6 +103,9 @@ function waitForResults(){
 }
 
 function waitForSWResults(){
+  if(randomizeUndercutValue === true){
+    undercutValue = Math.ceil(Math.random()*100);
+  }
   waitForResults().then(function(){
     const searchedItem = document.getElementById("search_for").textContent.split("matching \'")[1].replace("\'...", "");
     const searchedItemPrice = parseInt(
@@ -119,9 +122,6 @@ function waitForSWResults(){
     console.log("Lowest price for "+searchedItem+" is "+searchedItemPrice);
     if(userName !== searchedItemSeller){
       updateItemPrice(searchedItem, searchedItemPrice);
-      if(randomizeUndercutValue === true){
-        undercutValue = Math.ceil(Math.random()*100);
-      }
     }
     waitForSWResults();
   }).catch((e)=>{
@@ -142,3 +142,4 @@ function updateItemPrice(itemName, itemPrice){
 if(autoPriceAfterSSW === true){
   waitForSWResults();
 }
+
