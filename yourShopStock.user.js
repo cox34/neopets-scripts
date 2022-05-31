@@ -1,19 +1,17 @@
 // ==UserScript==
 // @name        Neopets - Your Shop Stock
-// @include     http*://www.neopets.com/market.phtml?*type=your*
-// @include     http*://www.neopets.com/market_your.phtml*
+// @author      cox34
+// @namespace   https://github.com/cox34/neopets-scripts
+// @match       *://www.neopets.com/market.phtml?*type=your*
+// @match       *://www.neopets.com/market_your.phtml*
 // @grant       none
 // @version     2.1
-// @description Highlight new stock, warn if Nerkmid price seems low, auto-price after SSW
+// @description Auto-input price after SSW search, highlight newly stocked items, warn if Nerkmid price seems low
 // ==/UserScript==
-//v1.1 fixed it so if nerk price is 0 it wont warn
-//v1.2 include https://www.neopets.com/market_your.phtml* 
-//(this link seems to only appear when you click view stock after adding an item from inv)
-//v2 auto price after ssw
-//v2.1 fixed for 1 np items
 
+//you can change these
 const highlightNewStock = true;
-const removeZeroes = false;
+const removeZeroes = false; //removes the "0" on unpriced items
 const warnOnLowPriceNerk = true;
 const nerkmidEstMinValue = 111111;
 
@@ -21,6 +19,8 @@ const autoPriceAfterSSW = true;
 const randomizeUndercutValue = false;
 let undercutValue = 1;
 //enter your own value or use a random one 1-100
+
+//dont change the rest
 
 const userName = document.querySelector(".user.medText").querySelector("a").textContent;
 //check username so you dont undercut your own shop
