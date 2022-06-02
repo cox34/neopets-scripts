@@ -14,7 +14,6 @@ if(document.querySelector(".content").querySelector("style")){
 for(node of document.querySelector(".content").childNodes){
   if(node.nodeType === 8 && node.textContent === " desc start "){
     while(node.nextSibling.nodeType !== 8 && node.nextSibling.textContent !== " desc end "){
-      console.log(node.nextSibling);
       node.nextSibling.remove();
     }
     break;
