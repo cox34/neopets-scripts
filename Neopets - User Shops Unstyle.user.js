@@ -8,9 +8,15 @@
 // @description Remove user styles from shops
 // ==/UserScript==
 
-document.querySelector(".content").querySelector("style").remove();
-document.querySelector(".content").childNodes.forEach((node) => {
+if(document.querySelector(".content").querySelector("style")){
+  document.querySelector(".content").querySelector("style").remove();
+}
+for(node of document.querySelector(".content").childNodes){
   if(node.nodeType === 8 && node.textContent === " desc start "){
-    node.nextElementSibling.remove();
+    while(node.nextSibling.nodeType !== 8 && node.nextSibling.textContent !== " desc end "){
+      console.log(node.nextSibling);
+      node.nextSibling.remove();
+    }
+    break;
   }
-});
+}
