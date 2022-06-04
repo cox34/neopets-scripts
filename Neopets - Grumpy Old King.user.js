@@ -22,5 +22,5 @@ document.getElementById("qp10").value = "tin of olives";
 for(let i=1; i<9; i++){
   const q = document.getElementById("ap"+i);
   const qOpt = q.querySelectorAll("option");
-  q.value = qOpt[Math.floor(Math.random()*qOpt.length)].value;
+  q.value = qOpt[(Math.floor(Math.random()*qOpt.length-1)+1)].value;
 }
