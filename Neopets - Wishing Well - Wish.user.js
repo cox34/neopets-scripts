@@ -2,7 +2,7 @@
 // @name        Neopets - Wishing Well
 // @author      cox34
 // @namespace   https://github.com/cox34/neopets-scripts
-// @match       https://www.neopets.com/wishing.phtml
+// @match       *://www.neopets.com/wishing.phtml
 // @grant       none
 // @version     1.0
 // @description Input wishing well wish
