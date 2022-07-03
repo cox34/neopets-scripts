@@ -4,7 +4,7 @@
 // @namespace   https://github.com/cox34/neopets-scripts
 // @match       *://www.neopets.com/safetydeposit.phtml
 // @grant       none
-// @version     1.0
+// @version     1.1
 // @description Highlights items in SDB
 // ==/UserScript==
 
@@ -25,6 +25,7 @@
 const highlightLists = [
   
   {
+    exact: false,
     color: "gold",
     items: [
       "nerkmid",
@@ -33,10 +34,12 @@ const highlightLists = [
   },
   
   {
+    exact: true,
     color: "#d3a3a2",
     items: [
       "seaweed",
       "rotten left",
+      "apple",
     ]
   },
   
@@ -46,8 +49,15 @@ const sdbitems = document.querySelector(".content").querySelectorAll("table")[3]
 
 highlightLists.forEach((list) => {
   for(let sdbitem of sdbitems){
-    if(list.items.some(e => sdbitem.querySelector("td[align='left']").textContent.toLowerCase().includes(e.toLowerCase()))){
-      sdbitem.style.backgroundColor = list.color;
+    if(list.exact === true){
+      if(list.items.some(e => sdbitem.querySelector("td[align='left']").textContent.toLowerCase() === e.toLowerCase())){
+        sdbitem.style.backgroundColor = list.color;
+      }
+    }
+    else {
+      if(list.items.some(e => sdbitem.querySelector("td[align='left']").textContent.toLowerCase().includes(e.toLowerCase()))){
+        sdbitem.style.backgroundColor = list.color;
+      }
     }
   } 
 });
